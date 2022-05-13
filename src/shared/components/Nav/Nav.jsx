@@ -1,6 +1,6 @@
 import "./Nav.scss";
 import Logo from "../../../assets/deus.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (

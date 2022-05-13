@@ -1,8 +1,7 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
-import BeerDetail from "../shared/components/BeerDetail/BeerDetail";
-import Gallery from "../shared/components/Gallery/Gallery";
-import PostBeer from "../shared/components/PostBeer/PostBeer";
+import BeerDetail from "../Pages/BeerDetail/BeerDetail";
+import Gallery from "../Pages/Gallery/Gallery";
+import PostBeer from "../Pages/PostBeer/PostBeer";
 
 const RoutesFile = () => {
   return (

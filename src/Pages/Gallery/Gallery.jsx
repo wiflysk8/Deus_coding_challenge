@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useContext } from "react";
-import { BeerContext } from "../../contexts/BeerContext";
+import useContext from "react";
+import { BeerContext } from "../../shared/contexts/BeerContext";
 import "./Gallery.scss";
-import Search from "../../../assets/lupa.png";
-import Card from "../Card/Card";
-import Nav from "../Nav/Nav";
+import Search from "../../assets/lupa.png";
+import Card from "../../shared/components/Card/Card";
+import Nav from "../../shared/components/Nav/Nav";
 
 const Gallery = () => {
   const { beers, onSearch, handleNext, handlePrev, paginate } = useContext(BeerContext);
