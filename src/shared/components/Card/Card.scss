@@ -65,22 +65,22 @@
   display: flex;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
   .c-card {
     width: 80%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     line-height: 20px;
-    margin: 10%;
+    margin: 3%;
     &__img {
       margin-top: 10px;
       width: 20%;
       margin: 10%;
     }
     &__trash {
-      bottom: 270px;
-      left: 270px;
+      bottom: 60%;
+      left: 45%;
     }
     &__body {
       margin: 10px;
@@ -88,7 +88,7 @@
     }
 
     &__properties {
-      flex-direction: column;
+      flex-wrap: wrap;
 
       justify-content: center;
     }
