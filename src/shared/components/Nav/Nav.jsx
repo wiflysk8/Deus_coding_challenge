@@ -3,8 +3,6 @@ import Logo from "../../../assets/deus.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const Nav = () => {
-  const navigate = useNavigate;
-
   return (
     <section className="c-nav">
       <div className="c-nav__logo">
