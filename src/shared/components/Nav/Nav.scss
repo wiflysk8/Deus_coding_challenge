@@ -18,5 +18,19 @@
     margin: 0 18px;
     font-weight: 500;
     cursor: pointer;
+    text-transform: uppercase;
+  }
+  &__content {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-nav {
+    width: 100vw;
+    justify-content: space-between;
+    &__item {
+      font-size: 12px;
+    }
   }
 }

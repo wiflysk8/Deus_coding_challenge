@@ -7,7 +7,10 @@ const Nav = () => {
       <div className="c-nav__logo">
         <img src={Logo} alt="logo deus" className="c-nav__logo__img" />
       </div>
-      <p className="c-nav__item">About</p>
+      <div className="c-nav__content">
+        <p className="c-nav__item">Create your beer</p>
+        <p className="c-nav__item">About</p>
+      </div>
     </section>
   );
 };

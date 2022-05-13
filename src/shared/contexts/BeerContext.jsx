@@ -19,7 +19,7 @@ export default function BeerContextProvider({ children }) {
 
   useEffect(() => {
     const getBeers = async () => {
-      const res = await axios.get(`https://api.punkapi.com/v2/beers?page=${paginate}&per_page=8`);
+      const res = await axios.get(`https://api.punkapi.com/v2/beers?page=${paginate}&per_page=7`);
       setBeers(res.data);
       setFilteredBeers(res.data);
     };
