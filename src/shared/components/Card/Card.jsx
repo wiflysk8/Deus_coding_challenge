@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Card.scss";
 import Trash from "../../../assets/trash.png";
 import { Link, generatePath } from "react-router-dom";

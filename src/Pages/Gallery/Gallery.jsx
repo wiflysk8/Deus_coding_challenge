@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import useContext from "react";
+import { useContext } from "react";
 import { BeerContext } from "../../shared/contexts/BeerContext";
 import "./Gallery.scss";
 import Search from "../../assets/lupa.png";
