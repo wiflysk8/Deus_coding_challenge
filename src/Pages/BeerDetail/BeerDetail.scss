@@ -78,9 +78,10 @@
     justify-content: center;
     align-items: center;
     line-height: 20px;
-    margin: 10%;
+    margin: 0 10%;
     &__img {
       margin-top: 10px;
+      height: 50%;
     }
     &__description {
       width: 90%;
@@ -93,6 +94,6 @@
   }
   .cta {
     right: 10px;
-    top: 8px;
+    top: 18px;
   }
 }
