@@ -34,6 +34,8 @@ const PostBeer = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="c-form">
               <input placeholder="Name*" {...register("name", { required: true })} className="c-form__input" />
               {errors.name && <span className="c-form__error">This field is required</span>}
+              <input placeholder="Tagline*" {...register("tagline", { required: true })} className="c-form__input" />
+              {errors.tagline && <span className="c-form__error">This field is required</span>}
               <input placeholder="Image URL*" {...register("image_url", { required: true })} className="c-form__input" />
               {errors.image_url && <span className="c-form__error">This field is required</span>}
               <textarea rows="3" placeholder="Description*" {...register("description", { required: true })} className="c-form__textArea" />
