@@ -18,7 +18,6 @@ const PostBeer = () => {
   const onSubmit = (data) => {
     setBeer(data);
     setSubmited(true);
-    console.log(data);
   };
 
   const handleReset = () => {
@@ -32,7 +31,7 @@ const PostBeer = () => {
       <section className="c-postBeer">
         {!submited ? (
           <>
-            <h1> CREATE YOUR OWN BEER</h1>
+            <h1 className="c-postBeer__title"> CREATE YOUR OWN BEER</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="c-form">
               <input placeholder="Name*" {...register("name", { required: true })} className="c-form__input" />
               {errors.name && <span className="c-form__error">This field is required</span>}
@@ -40,14 +39,15 @@ const PostBeer = () => {
               {errors.image_url && <span className="c-form__error">This field is required</span>}
               <textarea rows="3" placeholder="Description*" {...register("description", { required: true })} className="c-form__textArea" />
               {errors.description && <span className="c-form__error">This field is required</span>}
-              <fieldset>
+              <fieldset className="c-form__fieldset">
                 <input placeholder="Alcohol %*" {...register("abv", { required: true })} className="c-form__input" />
                 {errors.abv && <span className="c-form__error">This field is required</span>}
                 <input placeholder="Bitterness*" {...register("ibu", { required: true })} className="c-form__input" />
                 {errors.ibu && <span className="c-form__error">This field is required</span>}
-
                 <input placeholder="EBC*" {...register("ebc", { required: true })} className="c-form__input" />
                 {errors.ebc && <span className="c-form__error">This field is required</span>}
+              </fieldset>
+              <fieldset className="c-form__fieldset">
                 <input placeholder="SRM*" {...register("srm", { required: true })} className="c-form__input" />
                 {errors.srm && <span className="c-form__error">This field is required</span>}
                 <input placeholder="PH*" {...register("ph", { required: true })} className="c-form__input" />
