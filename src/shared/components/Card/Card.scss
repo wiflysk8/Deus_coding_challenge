@@ -46,6 +46,7 @@
   }
   &__description {
     width: 98%;
+    font-weight: 400;
   }
   &__properties {
     display: flex;
@@ -91,6 +92,10 @@
       flex-wrap: wrap;
 
       justify-content: center;
+    }
+    &__description {
+      height: 11vh;
+      overflow-x: hidden;
     }
   }
   .c-link {

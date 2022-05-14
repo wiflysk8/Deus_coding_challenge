@@ -11,9 +11,18 @@
     height: 70vh;
   }
   &__description {
-    text-align: center;
     font-style: italic;
     width: 50%;
+  }
+  &__details {
+    display: flex;
+    &__title {
+      width: 20%;
+    }
+  }
+  &__food {
+    width: 40%;
+    display: flex;
   }
 }
 
@@ -73,23 +82,31 @@
 
 @media (max-width: 1000px) {
   .c-beerDetail {
-    width: 80%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     line-height: 20px;
-    margin: 0 10%;
+
     &__img {
       margin-top: 10px;
       height: 50%;
     }
     &__description {
       width: 90%;
+      line-height: 12px;
     }
     &__name {
       margin-top: 32px;
       color: rgb(55, 73, 67);
       text-shadow: 0px 0px 1px rgb(55, 73, 67);
+    }
+    &__food {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
     }
   }
   .cta {
