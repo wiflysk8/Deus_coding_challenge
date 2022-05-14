@@ -1,0 +1,102 @@
+.c-postBeer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6%;
+}
+.c-form {
+  margin: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid gray;
+  box-shadow: 2px -2px 8px gray;
+  width: 30vw;
+  padding: 2%;
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.041);
+  &__input {
+    width: 80%;
+    height: 24px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  &__textArea {
+    width: 80%;
+    border-radius: 5px;
+  }
+  &__error {
+    color: red;
+    font-size: 12px;
+  }
+  fieldset {
+    display: flex;
+    width: 80%;
+    gap: 4px;
+    border: none;
+  }
+  &__btn {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 4px 10px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 4px 10px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    cursor: pointer;
+    height: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      border-radius: 15px;
+      background-color: #212121;
+      z-index: -1;
+      -webkit-box-shadow: 4px 4px 10px -3px rgba(0, 0, 0, 0.27);
+      box-shadow: 4px 4px 10px -3px rgba(0, 0, 0, 0.27);
+      transition: all 250ms;
+    }
+
+    &:hover {
+      color: #e8e8e8;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+    &--create {
+      position: relative;
+      top: 72%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .c-postBeer {
+    margin-top: 16%;
+  }
+  .c-form {
+    width: 80vw;
+    height: 45vh;
+    gap: 10px;
+
+    &_btn {
+      &--create {
+        position: absolute;
+        bottom: 0%;
+      }
+    }
+  }
+}
