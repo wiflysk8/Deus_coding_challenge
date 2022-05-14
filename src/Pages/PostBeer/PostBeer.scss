@@ -5,7 +5,7 @@
   flex-direction: column;
   margin: 6%;
   &__title {
-    color: rgba(31, 63, 31, 0.74);
+    color: rgba(25, 41, 25, 0.74);
   }
 }
 .c-form {
@@ -16,19 +16,21 @@
   flex-direction: column;
   gap: 14px;
   border: 1px solid gray;
-  box-shadow: 4px -4px 12px rgba(128, 128, 128, 0.432);
+  -webkit-box-shadow: 0 0 4px rgb(161, 158, 158);
+  box-shadow: 0 0 6px rgb(161, 158, 158);
   width: 30vw;
   padding: 3%;
   border-radius: 6px;
   background-color: rgba(128, 128, 128, 0.041);
   &__input {
-    width: 80%;
+    width: 85%;
     height: 24px;
     border-radius: 5px;
     border: 1px solid gray;
+    padding: 4px;
   }
   &__textArea {
-    width: 80%;
+    width: 85%;
     border-radius: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
@@ -38,7 +40,7 @@
   }
   &__fieldset {
     display: flex;
-    width: 80%;
+    width: 85%;
     gap: 10px;
     border: none;
   }
@@ -93,9 +95,8 @@
   }
   .c-form {
     width: 80vw;
-    height: 45vh;
+    height: 50vh;
     gap: 10px;
-
     &_btn {
       &--create {
         position: absolute;
