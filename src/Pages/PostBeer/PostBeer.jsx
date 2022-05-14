@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import "./PostBeer.scss";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import Nav from "../../shared/components/Nav/Nav";
 import { useState } from "react";
 import Card from "../../shared/components/Card/Card";
@@ -11,7 +11,6 @@ const PostBeer = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
