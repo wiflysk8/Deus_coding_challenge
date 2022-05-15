@@ -24,7 +24,7 @@ https://deus.vercel.app
 
 ## Roadmap
 
-- Make a Api call to map the response and print the gallery with the results
+- Make a Api call to map the response and print the gallery with the results.
 
 - Make a component to manage the routes.
 
@@ -36,10 +36,12 @@ https://deus.vercel.app
 
 - Make a state to delete every single item by clicking it.
 
+- Move the API call, search and paginate functions to a context so i can use them throughout all the app.
+
 - Make a component to display the detail of every single item comming from the API
 
 - Make a header/Nav bar with the Deus logo to navigate to "/" and the diferent pages.
 
 - Make a component to post a new item. It uses React Hook Form and send the info to the same component who printed the gallery to reuse it.
 
-- Make media queries for correct display at mobile devices
+- Make media queries for correct display at mobile devices.
