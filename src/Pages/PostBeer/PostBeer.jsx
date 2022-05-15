@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import "./PostBeer.scss";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import Nav from "../../shared/components/Nav/Nav";
 import { useState } from "react";
 import Card from "../../shared/components/Card/Card";
@@ -11,7 +11,6 @@ const PostBeer = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -35,6 +34,8 @@ const PostBeer = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="c-form">
               <input placeholder="Name*" {...register("name", { required: true })} className="c-form__input" />
               {errors.name && <span className="c-form__error">This field is required</span>}
+              <input placeholder="Tagline*" {...register("tagline", { required: true })} className="c-form__input" />
+              {errors.tagline && <span className="c-form__error">This field is required</span>}
               <input placeholder="Image URL*" {...register("image_url", { required: true })} className="c-form__input" />
               {errors.image_url && <span className="c-form__error">This field is required</span>}
               <textarea rows="3" placeholder="Description*" {...register("description", { required: true })} className="c-form__textArea" />
@@ -60,14 +61,16 @@ const PostBeer = () => {
               </button>
             </form>
           </>
-        ) : beer ? (
-          <>
-            <Card beer={beer} />
-            <button onClick={handleReset} className="c-form__btn c-form__btn--create">
-              Create another Beer
-            </button>
-          </>
-        ) : null}
+        ) : (
+          beer && (
+            <>
+              <Card beer={beer} />
+              <button onClick={handleReset} className="c-form__btn c-form__btn--create">
+                Create another Beer
+              </button>
+            </>
+          )
+        )}
       </section>
     </>
   );
