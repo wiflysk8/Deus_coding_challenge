@@ -61,14 +61,16 @@ const PostBeer = () => {
               </button>
             </form>
           </>
-        ) : beer ? (
-          <>
-            <Card beer={beer} />
-            <button onClick={handleReset} className="c-form__btn c-form__btn--create">
-              Create another Beer
-            </button>
-          </>
-        ) : null}
+        ) : (
+          beer && (
+            <>
+              <Card beer={beer} />
+              <button onClick={handleReset} className="c-form__btn c-form__btn--create">
+                Create another Beer
+              </button>
+            </>
+          )
+        )}
       </section>
     </>
   );
