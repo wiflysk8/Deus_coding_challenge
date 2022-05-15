@@ -14,10 +14,11 @@
     font-weight: 500;
   }
   &__img {
-    width: 8%;
+    width: 10%;
     height: 85%;
     transition: all ease-in-out 0.3s;
     margin-right: 10%;
+    object-fit: contain;
 
     &:hover {
       transform: scale(1.15);
