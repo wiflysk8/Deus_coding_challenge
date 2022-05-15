@@ -1,0 +1,107 @@
+.c-postBeer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6%;
+  &__title {
+    color: rgba(25, 41, 25, 0.74);
+  }
+}
+.c-form {
+  margin: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid gray;
+  -webkit-box-shadow: 0 0 4px rgb(161, 158, 158);
+  box-shadow: 0 0 6px rgb(161, 158, 158);
+  width: 30vw;
+  padding: 3%;
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.041);
+  &__input {
+    width: 85%;
+    height: 24px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 4px;
+  }
+  &__textArea {
+    width: 85%;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  &__error {
+    color: red;
+    font-size: 12px;
+  }
+  &__fieldset {
+    display: flex;
+    width: 85%;
+    gap: 10px;
+    border: none;
+  }
+  &__btn {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 4px 10px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 4px 10px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+    cursor: pointer;
+    height: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      border-radius: 15px;
+      background-color: #212121;
+      z-index: -1;
+      -webkit-box-shadow: 4px 4px 10px -3px rgba(0, 0, 0, 0.27);
+      box-shadow: 4px 4px 10px -3px rgba(0, 0, 0, 0.27);
+      transition: all 250ms;
+    }
+
+    &:hover {
+      color: #e8e8e8;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+    &--create {
+      position: relative;
+      top: 72%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .c-postBeer {
+    margin-top: 24%;
+  }
+  .c-form {
+    width: 80vw;
+    height: 50vh;
+    gap: 10px;
+    &_btn {
+      &--create {
+        position: absolute;
+        bottom: 0%;
+      }
+    }
+  }
+}
