@@ -6,7 +6,7 @@ import { Link, generatePath } from "react-router-dom";
 const Card = ({ beer }) => {
   const [visibility, setVisibility] = useState(true);
 
-  const handleChange = () => {
+  const handleDelete = () => {
     setVisibility(false);
   };
 
@@ -14,7 +14,7 @@ const Card = ({ beer }) => {
     <>
       {visibility && (
         <figure className="c-card">
-          <img className="c-card__trash" src={Trash} onClick={handleChange} alt="trash can" />
+          <img className="c-card__trash" src={Trash} onClick={handleDelete} alt="trash can" />
           <Link className="c-link" to={generatePath("/beers/:id", { id: beer.id })}>
             <img className="c-card__img" src={beer.image_url} alt={beer.name} />
             <div className="c-card__body">
