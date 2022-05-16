@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Nav from "../../shared/components/Nav/Nav";
 import { useState } from "react";
 import Card from "../../shared/components/Card/Card";
+import Gallery from "../Gallery/Gallery";
 
 const PostBeer = () => {
   const [submited, setSubmited] = useState(false);
@@ -68,6 +69,7 @@ const PostBeer = () => {
               <button onClick={handleReset} className="c-form__btn c-form__btn--create">
                 Create another Beer
               </button>
+              <Gallery />
             </>
           )
         )}
