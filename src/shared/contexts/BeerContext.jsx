@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 export const BeerContext = createContext();
@@ -32,7 +33,6 @@ export default function BeerContextProvider({ children }) {
       if (beer.name.toLowerCase().includes(inputValue.toLowerCase())) {
         return beer;
       }
-      return false;
     });
     setBeers(filteredBeer);
   };
