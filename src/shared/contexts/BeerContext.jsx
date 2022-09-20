@@ -13,7 +13,7 @@ export default function BeerContextProvider({ children }) {
   };
 
   const handlePrev = () => {
-    if (paginate > 0) {
+    if (paginate > 1) {
       setPaginate(paginate - 1);
     }
   };
